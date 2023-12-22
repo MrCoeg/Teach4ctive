@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e138565a5c2d73246a3f6747bfb5ce75, type: 3}
+  m_Name: NewStopwatchDetailed
+  m_EditorClassIdentifier: 
+  id: 000000000100000002000000030000000400000005000000
+  stopwatchGroupId: 000000000000000000000000020000000200000001000000
+  title:
+  - Dono
+  - Kassino
+  - Indro
+  - buba
+  - bibo
+  - baby
+  currentStopwatchTime:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  maxTime:
+  - 13
+  - 5
+  - 7
+  - 2
+  - 6
+  - 1
+  isPaused: 000000000000
+  isRunning: 000000000000
+  isStop: 00000000000000

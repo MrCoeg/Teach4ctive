@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d018a89a1ff94c94cb7d532de28dd80f, type: 3}
+  m_Name: UIObject
+  m_EditorClassIdentifier: 
+  id: 000000000100000002000000
+  designKuId: 000000000000000000000000
+  isIcon: 010100
+  isText: 000001
+  anchoredPosition:
+  - {x: -332, y: 425}
+  - {x: -76, y: 425}
+  - {x: 0, y: 549.44}
+  text:
+  - 
+  - 
+  - Game Oke Bre
+  iconName:
+  - Girl Student
+  - Man Student
+  - 
+  textColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  textSize: 010000000100000031000000
+  iconSize:
+  - {x: 100, y: 100}
+  - {x: 100, y: 100}
+  - {x: 0, y: 0}

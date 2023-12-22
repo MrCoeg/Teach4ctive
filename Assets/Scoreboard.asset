@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b406982759a1b4e40bcc05854adbec8d, type: 3}
+  m_Name: Scoreboard
+  m_EditorClassIdentifier: 
+  id: 000000000100000002000000
+  tournamentId: ffffffff0000000001000000
+  timerId: ffffffffffffffff00000000
+  totalMatch: 020000000100000001000000
+  additionalTime:
+  - 300
+  - 120
+  - 0
+  teamAName:
+  - Tegar
+  - Bayu
+  - Cahya
+  teamBName:
+  - Rengga
+  - Tru
+  - Gupya
+  teamAScore: 000000000000000000000000
+  teamBScore: 000000000000000000000000
+  teamAColor:
+  - {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
+  - {r: 0.32549024, g: 1, b: 0.55032694, a: 1}
+  - {r: 0.36900002, g: 0.7686334, b: 1, a: 1}
+  teamBColor:
+  - {r: 0.35686275, g: 0.7411765, b: 0.96470594, a: 1}
+  - {r: 0.9568628, g: 0.3137255, b: 0.3137255, a: 1}
+  - {r: 0.31764707, g: 0.9725491, b: 0.53333336, a: 1}
+  scoreMakerTeamName:
+  - items: []
+  - items:
+    - 
+  - items:
+    - 
+  scoreMakerName:
+  - items: []
+  - items: []
+  - items: []

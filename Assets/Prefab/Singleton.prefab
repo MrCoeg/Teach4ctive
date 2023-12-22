@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4875093770438738878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4875093770438738876}
+  - component: {fileID: 4875093770438738879}
+  m_Layer: 0
+  m_Name: Singleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4875093770438738876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875093770438738878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 818.20245, y: 1281.2606, z: -7.7660522}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4875093770438738879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875093770438738878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fcf1f4392a1e34ba320a1ec6b5349b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  credentials: {fileID: 11400000, guid: 4bc47b72eb693de439cf3c8fcc80e97f, type: 2}
+  stopwatchGroup: {fileID: 11400000, guid: 0d86e154ab49b5b4292a1877dd0b81b9, type: 2}
+  stopwatchDetailed: {fileID: 11400000, guid: 912c3320516902e4a8236d15f4440bfc, type: 2}
+  timerGroup: {fileID: 11400000, guid: 530c57de20dbfce498dceb4b43b70532, type: 2}
+  scoreboard: {fileID: 11400000, guid: 8989d47295537a84b9d019ea5d95e15d, type: 2}
+  designKu: {fileID: 11400000, guid: 3d9ad56cbb2452f4db3482c0a09c4166, type: 2}
+  uiObject: {fileID: 11400000, guid: ce5c2652926638547812e6fcb55623bc, type: 2}
+  pustaka: {fileID: 11400000, guid: 4a41afb3df667f3448677a9a5b24c5fd, type: 2}
+  tournament: {fileID: 11400000, guid: 04475945a5cf8da4abc1b70413eb87f9, type: 2}
+  currentStopwatchGroupId: 0
+  currentDesignGroupId: 0
+  currentTurnamenGroupId: 0
