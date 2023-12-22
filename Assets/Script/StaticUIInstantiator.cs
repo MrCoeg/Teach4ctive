@@ -25,6 +25,21 @@ public static class StaticUIInstantiator
         return instantiatedObjects;
     }
 
+    public static List<GameObject> InstantiateScoreboard(int count, GameObject prefab, Transform parent)
+    {
+        List<GameObject> instantiatedObjects = new List<GameObject>();
+
+        for (int i = 0; i < count; i++)
+        {
+            GameObject instance = Object.Instantiate(prefab, parent);
+            RectTransform rectTransform = instance.GetComponent<RectTransform>();
+
+            instantiatedObjects.Add(instance);
+        }
+
+        return instantiatedObjects;
+    }
+
     public static List<GameObject> InstantiateUIWithButton(int count, GameObject prefab, GameObject button,Transform parent, float space)
     {
         List<GameObject> instantiatedObjects = new List<GameObject>();
@@ -32,7 +47,7 @@ public static class StaticUIInstantiator
 
         for (int i = 0; i < count; i++)
         {
-            GameObject instance = Object.Instantiate(prefab, parent);
+            GameObject instance = Object.Instantiate(prefab, parent, false);
             RectTransform rectTransform = instance.GetComponent<RectTransform>();
 
             if (rectTransform != null)
@@ -78,6 +93,13 @@ public static class StaticUIInstantiator
         }
 
         return instantiatedObjects;
+    }
+
+    public static GameObject InstantiateUIAtSecondLast(GameObject prefab, Transform parent, int childNumber)
+    {
+            GameObject instance = Object.Instantiate(prefab, parent);
+            instance.transform.SetSiblingIndex(childNumber);
+            return instance;
     }
 
 }

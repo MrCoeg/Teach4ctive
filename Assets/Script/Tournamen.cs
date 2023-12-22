@@ -15,8 +15,42 @@ public class Tournamen : ScriptableObject
 
     private List<ScoreboardEntry> currentScoreboardEntryTemp;
 
-    public void AddTournamen()
+    public void AddTournamen(TournamentEntry entry)
     {
+        for (int i = 0; i < currentScoreboardEntryTemp.Count; i++)
+        {
+            SingletonManager.Instance.timerGroup.Insert(new TimerEntry
+            {
+                Id = SingletonManager.Instance.timerGroup.id.Count,
+                ScoreboardId = SingletonManager.Instance.scoreboard.id.Count,
+                Title = "Tournament",
+                TimerTime = entry.Time + entry.AdditionalTime,
+                CurrentTime = entry.Time + entry.AdditionalTime,
+                IsPaused = false,
+                IsRunning = false,
+                IsStop = false,
+            });
+
+            SingletonManager.Instance.scoreboard.Insert(new ScoreboardEntry
+            {
+                Id = SingletonManager.Instance.scoreboard.id.Count,
+                TeamAName = currentScoreboardEntryTemp[i].TeamAName,
+                TeamBName = currentScoreboardEntryTemp[i].TeamBName,
+                TeamAColor = currentScoreboardEntryTemp[i].TeamAColor,
+                TeamBColor = currentScoreboardEntryTemp[i].TeamBColor,
+                TournamentId = id.Count,
+                AdditionalTime = entry.AdditionalTime,
+                TotalMatch = entry.TotalMatch,
+            });
+        }
+
+        id.Add(id.Count);
+        title.Add(entry.Title);
+        teams.Add(entry.Teams);
+        time.Add(entry.Time);
+        totalMatch.Add(entry.TotalMatch);
+        additionalTime.Add(entry.AdditionalTime);
+        mode.Add(entry.Mode);
 
     }
 
@@ -83,7 +117,7 @@ public class Tournamen : ScriptableObject
             return new TournamentEntry(
                 id[index],
                 title[index],
-                teams,
+                teams[index],
                 time[index],
                 totalMatch[index],
                 additionalTime[index],
@@ -100,7 +134,7 @@ public class Tournamen : ScriptableObject
             allEntries.Add(new TournamentEntry(
                 id[i],
                 title[i],
-                teams,
+                teams[i],
                 time[i],
                 totalMatch[i],
                 additionalTime[i],
@@ -121,13 +155,13 @@ public struct TournamentEntry
 {
     public int Id;
     public string Title;
-    public List<TeamInformation> Teams;
+    public TeamInformation Teams;
     public float Time;
     public int TotalMatch;
     public float AdditionalTime;
     public TournamentMode Mode;
 
-    public TournamentEntry(int id, string title, List<TeamInformation> teams, float time, int totalMatch, float additionalTime, TournamentMode mode)
+    public TournamentEntry(int id, string title, TeamInformation teams, float time, int totalMatch, float additionalTime, TournamentMode mode)
     {
         Id = id;
         Title = title;
