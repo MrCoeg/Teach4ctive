@@ -14,6 +14,11 @@ public class TambahDesain : MonoBehaviour
         GetAallTimer();
     }
 
+    public void changeScene(int index)
+    {
+        StaticSceneChanger.ChangeScene(index);
+    }
+
     public void GetAallTimer()
     {
         var allTimerData = SingletonManager.Instance.designKu.GetAll();

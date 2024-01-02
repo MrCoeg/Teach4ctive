@@ -23,6 +23,11 @@ public class TambahTurnamen : MonoBehaviour
         GetAallTimer();
     }
 
+    public void Tambah(int scene)
+    {
+        StaticSceneChanger.ChangeScene(scene);
+    }
+
     public void GetAallTimer()
     {
         var allTimerData = SingletonManager.Instance.tournament.GetAll();

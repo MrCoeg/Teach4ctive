@@ -29,4 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Timer/Tambah Timer.unity
     guid: b549611f969c2b74a9c90ea194785c5b
+  - enabled: 1
+    path: Assets/Scenes/DesainKu/Desainku.unity
+    guid: ceeac8fe5e4b1494d9328b2593815c28
+  - enabled: 1
+    path: Assets/Scenes/LiveDraw/Livedraw.unity
+    guid: a262d519100c5d14f91d3d4defd03aa6
+  - enabled: 1
+    path: Assets/Scenes/Pustakaku/Pustakaku.unity
+    guid: 1f52c16c7959da447aefebae36f83557
+  - enabled: 1
+    path: Assets/Scenes/Turnamen/TambahTurnamen.unity
+    guid: d0485fdcb0089e84a8520a50f2381422
+  - enabled: 1
+    path: Assets/Scenes/Profile/Profile.unity
+    guid: 71ce9bf23261f674d96d13d42d03d7c8
   m_configObjects: {}

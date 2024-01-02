@@ -74,7 +74,19 @@ public class Scoreboard : ScriptableObject
         {
             return new ScoreboardEntry
             {
-                // Populate with data from the lists
+                Id = id[index],
+                TournamentId = tournamentId[index],
+                TimerId = timerId[index],
+                TotalMatch = totalMatch[index],
+                AdditionalTime = additionalTime[index],
+                TeamAName = teamAName[index],
+                TeamBName = teamBName[index],
+                TeamAScore = teamAScore[index],
+                TeamBScore = teamBScore[index],
+                TeamAColor = teamAColor[index],
+                TeamBColor = teamBColor[index],
+                ScoreMakerTeamName = scoreMakerTeamName[index],
+                ScoreMakerName = scoreMakerName[index]
             };
         }
         throw new System.Exception("Scoreboard with specified ID not found");

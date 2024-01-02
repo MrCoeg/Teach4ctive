@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56683640a1bd9f4097c5a7a3142d084, type: 3}
   m_Name: Tournament
   m_EditorClassIdentifier: 
-  id: 0000000001000000
+  id: 000000000100000002000000
   title:
   - Turnamen Nasional
   - Turnamen Sekolah
+  - Tournament
   teams:
   - name:
     - Bro Code
@@ -33,11 +34,19 @@ MonoBehaviour:
     - {r: 0.8018868, g: 0.35933605, b: 0.35933605, a: 1}
     - {r: 0.36078435, g: 0.7707189, b: 0.8, a: 1}
     - {r: 0.45594776, g: 0.36078435, b: 0.8, a: 1}
+  - name:
+    - Nama Tim
+    - Nama Tim
+    color:
+    - {r: 0.34117654, g: 0.8980392, b: 0.52679753, a: 1}
+    - {r: 0.47234115, g: 0.2811944, b: 0.8396226, a: 1}
   time:
   - 2700
   - 2700
-  totalMatch: 0200000002000000
+  - 60
+  totalMatch: 020000000200000001000000
   additionalTime:
   - 2
   - 2
-  mode: 0000000000000000
+  - 2
+  mode: 000000000000000001000000

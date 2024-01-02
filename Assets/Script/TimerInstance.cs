@@ -13,7 +13,6 @@ public class TimerInstance : MonoBehaviour
     [SerializeField] private int id;
     private float elapsedTime;
 
-
     // Initialization method
     public void Init(TimerEntry entry)
     {
@@ -25,6 +24,13 @@ public class TimerInstance : MonoBehaviour
             playButton.onClick.AddListener(StartTimer);
             pauseButton.onClick.AddListener(PauseTimer);
             stopButton.onClick.AddListener(ResetTimer);
+        }
+
+        elapsedTime = this.entry.CurrentTime;
+
+        if (entry.IsRunning)
+        {
+            StartTimer();
         }
 
         if (tmpPro1 != null)
@@ -43,9 +49,15 @@ public class TimerInstance : MonoBehaviour
     {
         if (entry.IsRunning)
         {
+            entry.IsRunning = false;
+            StartCoroutine(SingletonManager.Instance.runTimer(SingletonManager.Instance.timerGroup.GetDataById(entry.Id), tmpPro2));
+/*
             elapsedTime -= Time.deltaTime;
-            UpdateStopwatchText();
+            SingletonManager.Instance.timerGroup.UpdateTimeById(entry.Id, elapsedTime);
+            UpdateStopwatchText();*/
         }
+
+
     }
 
     private void UpdateStopwatchText()
@@ -56,6 +68,7 @@ public class TimerInstance : MonoBehaviour
 
     private void StartTimer()
     {
+        SingletonManager.Instance.timerGroup.UpdateStatusById(entry.Id, TimerStatus.running);
         entry.IsRunning = true;
         playButton.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
@@ -64,7 +77,9 @@ public class TimerInstance : MonoBehaviour
 
     private void PauseTimer()
     {
+        SingletonManager.Instance.timerGroup.UpdateStatusById(entry.Id, TimerStatus.paused);
         entry.IsRunning = false;
+        entry.IsPaused = true;
         pauseButton.gameObject.SetActive(false);
         stopButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
@@ -72,9 +87,11 @@ public class TimerInstance : MonoBehaviour
 
     private void ResetTimer()
     {
+        SingletonManager.Instance.timerGroup.UpdateStatusById(entry.Id, TimerStatus.stopped);
         entry.IsRunning = false;
-        elapsedTime = 0;
-        UpdateStopwatchText();
+        entry.IsStop = true;
+        elapsedTime = entry.TimerTime;
+        /*        UpdateStopwatchText();*/
         playButton.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
         stopButton.gameObject.SetActive(false);

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Scoreboard
   m_EditorClassIdentifier: 
   id: 000000000100000002000000
-  tournamentId: ffffffff0000000001000000
-  timerId: ffffffffffffffff00000000
+  tournamentId: ffffffff0100000002000000
+  timerId: 00000000ffffffff00000000
   totalMatch: 020000000100000001000000
   additionalTime:
   - 300
@@ -28,8 +28,8 @@ MonoBehaviour:
   - Rengga
   - Tru
   - Gupya
-  teamAScore: 000000000000000000000000
-  teamBScore: 000000000000000000000000
+  teamAScore: 020000000000000000000000
+  teamBScore: 010000000000000000000000
   teamAColor:
   - {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
   - {r: 0.32549024, g: 1, b: 0.55032694, a: 1}
@@ -39,12 +39,28 @@ MonoBehaviour:
   - {r: 0.9568628, g: 0.3137255, b: 0.3137255, a: 1}
   - {r: 0.31764707, g: 0.9725491, b: 0.53333336, a: 1}
   scoreMakerTeamName:
-  - items: []
   - items:
-    - 
+    - Tegar
+    - Rengga
+    - Tegar
   - items:
-    - 
+    - Tegar
+    - Rengga
+    - Tegar
+  - items:
+    - Tegar
+    - Rengga
+    - Tegar
   scoreMakerName:
-  - items: []
-  - items: []
-  - items: []
+  - items:
+    - Abimanyu
+    - Tirta
+    - Kencana
+  - items:
+    - Abimanyu
+    - Tirta
+    - Kencana
+  - items:
+    - Abimanyu
+    - Tirta
+    - Kencana

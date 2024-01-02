@@ -68,6 +68,44 @@ public class TimerGroup : ScriptableObject
         throw new System.Exception("Timer with specified ID not found");
     }
 
+    public void UpdateTimeById(int id, float time)
+    {
+        int index = this.id.IndexOf(id);
+        if (index != -1)
+        {
+            currentTime[index] = time;
+        }
+    }
+
+    public void UpdateStatusById(int id, TimerStatus status)
+    {
+        int index = this.id.IndexOf(id);
+        if (index != -1)
+        {
+            switch (status)
+            {
+                case TimerStatus.running:
+                    isRunning[index] = true;
+                    isStop[index] = false;
+                    isPaused[index] = false;
+                    break;
+                case TimerStatus.paused:
+                    isRunning[index] = false;
+                    isStop[index] = false;
+                    isPaused[index] = true;
+                    break;
+                case TimerStatus.stopped:
+                    isRunning[index] = false;
+                    isStop[index] = true;
+                    isPaused[index] = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    }
+
     // Method to get data by Scoreboard ID
     public List<TimerEntry> GetDataByScoreboardId(int boardId)
     {
@@ -75,6 +113,10 @@ public class TimerGroup : ScriptableObject
     }
 }
 
+public enum TimerStatus
+{
+    running, paused, stopped
+}
 public struct TimerEntry
 {
     public int Id;
